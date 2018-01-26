@@ -15,7 +15,7 @@ def hello_world():
 def include():
     return render_template('inclue.html')
 
-# 宏
+# 宏的例子
 @app.route('/macro', methods=['GET', 'POST'])
 def macro():
     return render_template('macro.html')
