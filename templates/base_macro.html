@@ -1,0 +1,13 @@
+{#def 函数名(参数)#}
+
+
+{% macro input(label="", type="text", name="", value="")%}
+{#    可以提出公用的代码, 预留出要动态传入的参数值#}
+    <label>{{ label }}</label><input type="{{ type }}" name="{{ name }}" value="{{ value }}"><br>
+{% endmacro %}
+
+
+{% macro input2(label="", type="text", name="", value="")%}
+    <label>{{ label }}</label><input type="{{ type }}" name="{{ name }}" value="{{ value }}"><br>
+{% endmacro %}
+

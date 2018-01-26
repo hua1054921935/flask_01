@@ -13,5 +13,17 @@
 {#支持链式调用#}
 <h1>{{ 'hello world' | reverse | upper }}</h1>
 <hr>
+{{ mylist }}
+<hr>
+{% for list in mylist if list>3 %}
+<h1>{{ list }}</h1>
+{% endfor %}
+<hr>
+
+
+
+
+
+
 </body>
 </html>

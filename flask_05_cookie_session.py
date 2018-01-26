@@ -35,11 +35,12 @@ def delete_cookie():
 def set_session():
     session['names']='heima'
     return 'set_session'
+
+
 # 获取session
 @app.route('/get_session', methods=['GET', 'POST'])
 def get_session():
     return session.get('names')
-
 
 if __name__ == '__main__':
     app.run(debug=True)

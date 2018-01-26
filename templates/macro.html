@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form>
+    <label>用户名:</label><input type="text" name="username"><br>
+    <label>昵称:</label><input type="text" name="nickname"><br>
+    <label>身份证:</label><input type="text" name="idcard"><br>
+    <label>密码:</label><input type="password" name="password"><br>
+    <label>确认密码:</label><input type="password" name="password2"><br>
+    <input type="submit" value="提交">
+</form>
+
+<hr>
+
+{#类似python函数的定义, 提取公用的参数, 如果某个参数的值频繁被使用, 可以设置默认值#}
+
+{#def 函数名(参数)#}
+
+{#{% macro input(label="", type="text", name="", value="")%}#}
+{#    可以提出公用的代码, 预留出要动态传入的参数值#}
+{#    <label>{{ label }}</label><input type="{{ type }}" name="{{ name }}" value="{{ value }}"><br>#}
+{#{% endmacro %}#}
+
+
+{% import 'base_macro.html' as func%}
+
+<form>
+
+</form>
+    {{ func.input2('用户名:', name="username") }}
+    {{ func.input2('昵称:', name="nickname") }}
+    {{ func.input2('身份证:', name="idcard") }}
+    {{ func.input2('密码:', type="password", name="password") }}
+    {{ func.input2('确认密码:', type="password", name="password2") }}
+    {{ func.input2(type="submit", value="提交") }}
+</body>
+
+</html>
